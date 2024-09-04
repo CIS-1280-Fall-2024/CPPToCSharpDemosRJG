@@ -19,13 +19,13 @@
             Console.WriteLine($"The cost is {cost:C} and the index is {index}.");
             string text = $"The cost is {cost:C} and the index is {index}.";
 
-            int[] numbers = { 100, 200, 300, 400 };
+            double[] numbers = { 1.1234, 2.43200, 30.2340, 40.12340 };
             string[] names = { "Bob", "Susan", "Tom", "Annita" };
             Console.WriteLine($"{"index",-10} {"name",-20} {"number",-5}");
             for(int i = 0; i < numbers.Length; i++)
             {
                 //Console.WriteLine(i.ToString()+names[i]+numbers[i]);
-                Console.WriteLine($"{i,-10} {names[i],-20} {numbers[i],-5}");
+                Console.WriteLine($"{i,-10} {names[i],-20} {numbers[i],-5:f2}");
             }
 
             Console.WriteLine(text);
