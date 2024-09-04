@@ -29,6 +29,31 @@
             }
 
             Console.WriteLine(text);
+
+            //Make a file
+
+            string path = @"..\..\Release\myfile.txt";
+            if(!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine("Hello, World!");
+                }
+            }
+
+            // Open the file to read from.
+            using (StreamReader sr = File.OpenText(path))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            
+            string numberstr = "1234";
+            int number = int.Parse(numberstr);
+            float number2 = float.Parse(numberstr); 
             //wait for user to acknowledge the results
             Console.WriteLine("Press Enter to terminate...");
             Console.Read();
